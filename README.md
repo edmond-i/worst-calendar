@@ -1,32 +1,35 @@
-# React + TypeScript + Vite
+# Worst Calendar
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The worst calendar app that can possibly exist, built on purpose.
 
-Currently, two official plugins are available:
+**Live app:** https://edmond-i.github.io/worst-calendar/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Every feature that makes a calendar good — clear dates, readable UI, working
+event creation, sane notifications — is deliberately inverted here: clashing
+colors, jumbled fonts, date cells that lie about what day it is, a
+cursor-avoidance UI ("Google Space" effect) on the date pickers, text that
+scrambles while you type, an event wizard with a hidden unlock requirement,
+and notification sounds designed to be as annoying as possible.
 
-## React Compiler
+The **Settings** tab is the one part that's not a joke: a real chaos
+intensity toggle (off / mild / chaos) and a real volume/mute control.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the Oxlint configuration
+React + TypeScript + Vite.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Local development
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Deploy
+
+```
+npm run build
+npm run deploy
+```
+
+Publishes `dist/` to the `gh-pages` branch, served via GitHub Pages.
