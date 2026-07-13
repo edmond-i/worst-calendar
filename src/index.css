@@ -1,0 +1,27 @@
+/* Deliberately clashing palette. High-saturation, low-harmony, and a few
+   near-illegible contrast combos — but nothing strobes or flashes, since
+   rapid flicker is a real seizure risk, not just "bad taste." */
+:root {
+  --bg: #ff00c8;
+  --text: #2f7d1f;
+  --border: #000;
+  --sans: 'Comic Sans MS', 'Papyrus', cursive, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

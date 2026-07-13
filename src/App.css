@@ -1,0 +1,280 @@
+.app-shell {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 16px;
+  border-bottom: 4px dashed #000;
+  background: #39ff14;
+}
+
+.app-title {
+  margin: 0 0 12px;
+  display: flex;
+  gap: 8px;
+}
+.title-piece.a {
+  font-size: 44px;
+  color: #ff0000;
+  transform: rotate(-4deg);
+}
+.title-piece.b {
+  font-size: 22px;
+  color: #0000ff;
+  transform: rotate(3deg);
+}
+
+.app-nav {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.app-nav button {
+  padding: 10px 14px;
+  border: 3px solid #000;
+  background: #fffb00;
+  color: #7a5900;
+  font-size: 15px;
+}
+.app-nav button.nav-active {
+  background: #ff6a00;
+  color: #4b0082;
+  font-weight: bold;
+}
+
+.app-main {
+  flex: 1;
+  padding: 20px;
+  background: repeating-linear-gradient(45deg, #ff00c8, #ff00c8 22px, #d400a6 22px, #d400a6 44px);
+}
+
+/* ---------- Calendar grid ---------- */
+.calendar-shell {
+  background: #fff;
+  border: 4px solid #000;
+  padding: 10px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.calendar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.calendar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  background: #000;
+  border: 3px solid #000;
+}
+.calendar-cell {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  word-break: break-word;
+  text-align: center;
+}
+.cell-date {
+  line-height: 1.1;
+}
+.cell-today-badge {
+  font-size: 9px;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  padding: 1px 4px;
+  margin-top: 2px;
+}
+
+.clash-a { background: #ff2d55; color: #6b0016; }
+.clash-b { background: #ffe600; color: #fff9c4; }
+.clash-c { background: #00e5ff; color: #005661; }
+.clash-d { background: #7cfc00; color: #4b6b00; }
+.clash-e { background: #8a2be2; color: #2d0a4e; }
+.fake-today { outline: 3px solid #ff0000; }
+
+.fs-tiny { font-size: 9px; }
+.fs-small { font-size: 12px; }
+.fs-normal { font-size: 16px; }
+.fs-big { font-size: 24px; }
+.fs-huge { font-size: 36px; }
+
+/* ---------- Haunted input ---------- */
+.haunted-wrap {
+  position: relative;
+  margin: 8px 0;
+}
+.haunted-field {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: 2px solid #000;
+  font-family: inherit;
+}
+.haunted-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 8px;
+  pointer-events: none;
+  font-size: 16px;
+  font-family: inherit;
+  white-space: pre-wrap;
+  color: #b30000;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Chaos date picker ---------- */
+.chaos-picker {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 10px;
+  margin: 10px 0;
+}
+.chaos-picker-label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.chaos-picker-field {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 160px;
+  padding: 10px;
+  background: #f0f0f0;
+}
+.date-option {
+  border: 2px solid #000;
+  background: #ffcc00;
+  padding: 8px 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.date-option-selected {
+  background: #00c853;
+  color: #043;
+}
+
+/* ---------- Wizard ---------- */
+.wizard-shell {
+  max-width: 560px;
+  margin: 0 auto;
+  background: #fff;
+  border: 4px solid #000;
+  padding: 18px;
+}
+.wizard-steps {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #444;
+}
+.field-label {
+  display: block;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #333;
+}
+.unlabeled-field {
+  display: block;
+  width: 100%;
+  margin: 14px 0;
+  padding: 8px;
+  border: 2px dotted #999;
+  font-family: inherit;
+}
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.wizard-summary {
+  background: #f5f5f5;
+  border: 2px solid #000;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.confirm-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+/* ---------- RSVP ---------- */
+.rsvp-shell {
+  max-width: 560px;
+  margin: 0 auto;
+  background: #fff;
+  border: 4px solid #000;
+  padding: 18px;
+}
+.rsvp-banner {
+  font-size: 11px;
+  background: #eee;
+  border: 1px dashed #999;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+.rsvp-confirm {
+  margin-top: 12px;
+  font-size: 14px;
+  background: #e8ffe8;
+  border: 2px solid #0a0;
+  padding: 8px;
+}
+
+/* ---------- Notifications ---------- */
+.notif-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  border: 4px solid #000;
+  padding: 18px;
+}
+.notif-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+/* ---------- Settings (kept sane) ---------- */
+.settings-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  color: #111;
+  border: 2px solid #333;
+  padding: 18px;
+  font-family: system-ui, sans-serif;
+}
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+.settings-buttons button {
+  border: 1px solid #333;
+  background: #eee;
+  padding: 6px 10px;
+  margin-left: 4px;
+  font-size: 13px;
+}
+.settings-buttons button.active {
+  background: #333;
+  color: #fff;
+}
